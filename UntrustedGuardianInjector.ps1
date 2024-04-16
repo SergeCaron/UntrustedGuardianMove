@@ -54,7 +54,7 @@ Add-Type -AssemblyName System.Windows.Forms
 $FileBrowser = New-Object System.Windows.Forms.OpenFileDialog -Property @{ 
 	# Stay within above directory even if this is ian insecure assumption.
 	Filter = 'Certificates (*signing.pfx)|*signing.pfx'
-	Title  = 'Please locate the encryption certificate for this host'
+	Title  = 'Please locate the signing certificate for this host'
 }
 $null = $FileBrowser.ShowDialog()
 If ($FileBrowser.FileName -eq "") {
